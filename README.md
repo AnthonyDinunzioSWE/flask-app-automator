@@ -134,4 +134,5 @@ Make sure to update this before deploying!
 🖼️ GUI Preview
 ---------------
 
-*(Add screenshots here of your CustomTkinter interface)*
+[Screenshot 2025-04-22 231641](https://github.com/user-attachments/assets/b28a1eab-f7f0-4001-b8bd-f9aea5fdc9e6)
+
