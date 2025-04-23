@@ -1,183 +1,137 @@
-Flask Project Automator
+🖥️ Flask Project Generator - Windows Desktop App
+=================================================
 
-A professional desktop application that automates the creation of robust Flask project structures with a single click.
+A modern, interactive, and user-friendly Python-based desktop GUI application built with **CustomTkinter** that automates the creation of a full-stack Flask project with proper file structure, template files, environment setup, and Git initialization.
 
-🚀 Features
+* * * * *
 
-Complete Flask Structure: Generates a fully structured Flask project using best practices
+📌 Features
+-----------
 
-Pre-configured Components: Sets up SQLAlchemy, Flask-Migrate, Flask-Login, and more
+-   ✅ Cross-platform CustomTkinter-based interface
 
-Modern Frontend: Includes Tailwind CSS for styling
+-   ✅ Auto-generates a Flask project with:
 
-Environment Setup: Automatically creates a virtual environment with all dependencies
+    -   Backend folder setup
 
-Git Integration: Initializes a Git repository
+    -   Frontend templates and static assets
 
-Instant Launch: Directly runs your Flask app and opens it in the browser
+    -   Virtual environment
 
-IDE Integration: Opens project in VSCode (if installed)
+    -   Predefined dependencies (Flask, SQLAlchemy, etc.)
 
-User-Friendly Interface: Clean, modern UI with real-time progress tracking
+-   ✅ Git repository auto-initialization
 
-📋 Prerequisites
+-   ✅ Tailwind CSS integration
 
-Python 3.8 or higher
+-   ✅ Environment variable setup (.env)
 
-Git (optional, but recommended)
+-   ✅ Progress updates and detailed status feedback
 
-Visual Studio Code (optional)
+* * * * *
 
-Windows, macOS, or Linux operating system
+⚙️ Tech Stack
+-------------
 
-🔧 Installation
+| Component | Details |
+| GUI | [CustomTkinter](https://github.com/TomSchimansky/CustomTkinter) |
+| Web Backend | Flask (with blueprints and auth support) |
+| ORM | SQLAlchemy + Flask-Migrate |
+| Authentication | Flask-Login |
+| Styling | Tailwind CSS |
+| Virtual Environments | Python `venv` |
+| Version Control | Git |
 
-Clone this repository or download the latest release:
+* * * * *
 
-git clone https://github.com/yourusername/flask-project-automator.git
+🧱 Project Structure (Auto-Generated)
+-------------------------------------
 
-cd flask-project-automator
-
-Create a virtual environment (recommended):
-
-python -m venv venv
-
-venv\Scripts\activate  # On Windows
-
-source venv/bin/activate  # On macOS/Linux
-
-Install required dependencies:
-
-pip install -r requirements.txt
-
-💻 Usage
-
-Run the application:
-
-python flask_automator.py
-
-Fill in your project details:
-
-Project Name: Name of your Flask application
-
-Project Location: Directory where your project will be created
-
-Click Create Project and watch as the application:
-
-Creates the project structure
-
-Sets up a virtual environment
-
-Installs all dependencies
-
-Initializes Git repository
-
-Launches your Flask application
-
-Opens the project in VSCode (if available)
-
-🏗️ Generated Project Structure
-
-your_project_name/
-
+```
+project_name/
 ├── backend/
-
-│   ├── models/
-
-│   ├── routes/
-
-│   │   └── main.py
-
-│   ├── utils/
-
-│   ├── __init__.py
-
-│   └── instances.py
-
+│   ├── __init__.py
+│   ├── instances.py
+│   ├── models/
+│   ├── routes/
+│   │   └── main.py
+│   └── utils/
 ├── frontend/
-
-│   ├── static/
-
-│   │   ├── css/
-
-│   │   │   └── styles.css
-
-│   │   ├── js/
-
-│   │   │   └── script.js
-
-│   │   └── uploads/
-
-│   └── templates/
-
-│       ├── auth/
-
-│       │   ├── login.html
-
-│       │   └── register.html
-
-│       ├── main/
-
-│       │   └── index.html
-
-│       └── base.html
-
-├── venv/
-
+│   ├── static/
+│   │   ├── css/styles.css
+│   │   ├── js/script.js
+│   │   └── uploads/
+│   └── templates/
+│       ├── base.html
+│       ├── main/index.html
+│       └── auth/
+│           ├── login.html
+│           └── register.html
 ├── .env
-
-├── .git/
-
-├── README.md
-
+├── run.py
 ├── requirements.txt
+├── README.md
+└── venv/ (auto-created)
+```
 
-└── run.py
+* * * * *
 
-✨ Technologies Included
+🚀 How It Works
+---------------
 
-| Category | Components | |----------|------------| | Backend | Flask, Flask-SQLAlchemy, Flask-Migrate, Flask-Login, Flask-CORS | | Database | SQLAlchemy ORM, SQLite (default) | | Frontend | Tailwind CSS, HTML templates, JavaScript | | Development | Python dotenv, Git integration, VSCode integration | | Deployment | Gunicorn pre-configured |
+1.  Launch the desktop app.
 
-🛠️ Customization
+2.  Enter a project name and choose a folder.
 
-The Flask Project Automator can be customized by modifying:
+3.  Click **"Create Project"**.
 
-DEPENDENCIES list in 
+4.  Watch as the app:
 
-flask_automator.py
+    -   Generates directories and files
 
- to add or remove Python packages
+    -   Creates and activates a virtual environment
 
-FOLDER_STRUCTURE dictionary to change the generated file structure
+    -   Installs all required dependencies
 
-TEMPLATES dictionary to modify the content of generated files
+    -   Initializes a Git repository
 
-🔍 How It Works
+    -   Outputs real-time progress
 
-Project Structure Creation: Generates directories and files based on the defined structure
+* * * * *
 
-Git Initialization: Sets up a Git repository in the project folder
+📦 Preinstalled Dependencies
+----------------------------
 
-Virtual Environment: Creates and activates a Python virtual environment
+The app auto-installs the following into your virtual environment:
 
-Dependency Installation: Installs all required packages using pip
+```
+flask
+flask-sqlalchemy
+flask-migrate
+flask-login
+python-dotenv
+gunicorn
+flask-cors
+```
 
-Requirements Generation: Creates a requirements.txt file with exact package versions
+You can also customize `requirements.txt` after project creation.
 
-Application Launch: Starts the Flask development server
+* * * * *
 
-IDE Integration: Opens the project in Visual Studio Code
+🔐 Environment Variables
+------------------------
 
-🤝 Contributing
+`.env` file created automatically:
 
-Contributions are welcome! Here's how you can contribute:
+```
+SECRET_KEY=your_secret_key
+```
 
-Fork the repository
+Make sure to update this before deploying!
 
-Create a feature branch: git checkout -b feature/amazing-feature
+* * * * *
 
-Commit your changes: git commit -m 'Add some amazing feature'
+🖼️ GUI Preview
+---------------
 
-Push to the branch: git push origin feature/amazing-feature
-
-Open a Pull Request
+*(Add screenshots here of your CustomTkinter interface)*
